@@ -7,11 +7,13 @@ const Schema = mongoose.Schema;
 // ----------------------
 const resourceSchema = new Schema({
   // example of optional fields
-  title:        { type: String, required: true },
-  description:  { type: String },
-  upVotes:      { type: Number, default: 0 },
-  createdAt:    { type: Date, default: Date.now }
-
+  item:         { type: String, required: true },
+  description:  { type: String, required: true, default: '' },
+  price:        { type: Number, required: true },
+  createdAt:    { type: Date, default: Date.now },
+  imgLink: 		 { type: Date, default: Date.now },
+  category:     { type: String },
+  forSale:      { type: Number, default: true }
 })
 
 

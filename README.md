@@ -1,4 +1,15 @@
-#ES6 Module Bundler Setup
+# Data Persistence - Meg's List - Part 1
+##Description
+Create a craigslist clone where users can upload items for sale in a casual unstructured, garage-sale style manner. In Part 1, you will need to build a UI-form that communicates with a REST API so that users will be able to save new postings to a backend.
+
+## Objectives
+
+After completing this assignment, you should be able to:
+
+* Use Backbone.Views to render a view template for a form
+* Use Backbone.Views to capture form data from the `submit` event
+* Save data from a submit event to a backend database
+
 
 ##Setup 
 
@@ -19,16 +30,55 @@ You should be prompted to provide a project name in the terminal.
 npm run go
 ```
 
-##### 4. Seed the database
+##### 4. Seed the database with some fake data.
 You only have to do this once
 ```
 npm run gen-seed-data
 ```
 
-##### 5. Checkout localhost:27017 connection in MongoChef to see if the data is there
+##### 5. Checkout localhost:27017 connection in MongoChef to see if the data is there.
 
 
 ##### 6. Workflow
 Do scss and javascript work in the `src/` directory. It will compile to the `dist/` with the taskrunner.
 
 `index.html` pages are served out of the `dist/`
+
+### Deliverables
+
+* A repository on github
+* Site styles written in SCSS in the `src/`  and compiled to the dist
+* JS written in `src/` and compiled to the dist folder
+
+### Requirements
+
+* No JS errors in the browser
+* All functions and code should work according to the following description.
+
+## Normal Mode
+Create a Backbone View builds an html string template of a form. The view should listen for a submit event 
+
+The data saved to the backend should have the following structure:
+```
+{
+	item: STRING,
+	price: NUMBER,
+	forSale: BOOLEAN,
+	description: STRING,
+	imgLink: STRING
+	category: STRING ('optional')
+}
+```
+
+## Explorer Mode
+Integrate with Backbone Router.
+
+
+## Adventure Mode
+Create a route to edit an input: 
+```
+'item/create'
+'item/edit'
+```
+
+It will populate the form and 
