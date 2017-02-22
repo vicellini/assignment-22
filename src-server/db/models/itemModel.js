@@ -11,10 +11,10 @@ const resourceSchema = new Schema({
   description:  { type: String, required: true, default: '' },
   price:        { type: Number, required: true },
   createdAt:    { type: Date, default: Date.now },
-  imgLink: 		 { type: Date, default: Date.now },
+  imgLink: 		 { type: String, default: Date.now },
   category:     { type: String },
   forSale:      { type: Number, default: true }
 })
 
 
-module.exports = resourceSchema
+module.exports = createModel('Item', resourceSchema)
