@@ -23,20 +23,20 @@ git clone  git@github.com:TIY-Charleston-Front-End-Engineering/assignment-backbo
 npm install
 ```
 
-##### 3. Run the taskrunner & run the local server
+##### 3. Set the project name so that we can create an exclusive section in the database for data related to this project.
 You should be prompted to provide a project name in the terminal.
 
 ```
-npm run go
+npm run set-project-name
 ```
 
-##### 4. Seed the database with some fake data.
-You only have to do this once
+##### 4. Seed the database with the fake data.
+You only have to do this once. control-c when done
 ```
 npm run gen-seed-data
 ```
 
-##### 5. Checkout localhost:27017 connection in MongoChef to see if the data is there.
+##### 5. Checkout «your-project-name_dev» in MongoChef to see if the seeded data is there.
 
 
 ##### 6. Workflow
