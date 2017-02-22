@@ -56,10 +56,11 @@ Do scss and javascript work in the `src/` directory. It will compile to the `dis
 * All functions and code should work according to the following description.
 
 ## Normal Mode
-Create a Backbone View builds an html string template of a form. The view should listen for a submit event and capture relevant data. Data should be saved by creating a new model instance
+Create a Backbone View builds an html string template of a form. The view should listen for a submit event and capture relevant data. Data should be saved by creating a new model instance.
 
 
 The data saved to the backend should have the following structure:
+
 ```
 {
 	item: STRING,
