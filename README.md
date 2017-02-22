@@ -56,7 +56,8 @@ Do scss and javascript work in the `src/` directory. It will compile to the `dis
 * All functions and code should work according to the following description.
 
 ## Normal Mode
-Create a Backbone View builds an html string template of a form. The view should listen for a submit event 
+Create a Backbone View builds an html string template of a form. The view should listen for a submit event and capture relevant data. Data should be saved by creating a new model instance
+
 
 The data saved to the backend should have the following structure:
 ```
@@ -71,14 +72,21 @@ The data saved to the backend should have the following structure:
 ```
 
 ## Explorer Mode
-Integrate with Backbone Router.
-
+Integrate with Backbone Router. (Give a root path that shows something like: 'site under construction')
+```
+'item/new'
+'' 
+```
 
 ## Adventure Mode
+Provide form validation that gives feedback as to whether a user submitted valid input.
+
+## Epic Mode
 Create a route to edit an input: 
 ```
-'item/create'
-'item/edit'
+'item/new'
+'item/:id/edit'
+''
 ```
 
 It will populate the form and 

@@ -2,22 +2,22 @@ let Router = require('express').Router;
 const apiRouter = Router()
 
 /*
- * NOTE: the model for the data-table should not have the name 'SomeModel'
+ * NOTE: the model for the data-table should not have the name 'ItemModel'
  */
-let SomeModel = require('../db/models/exampleModel.js')
+let ItemModel = require('../db/models/exampleModel.js')
 
 apiRouter
 /*
  * NOTE: the route should have a name that matches the name of the data-table
  */
- .get('/some-model', function(req, res){
-   SomeModel.find(req.query , function(err, results){
+ .get('/item', function(req, res){
+   ItemModel.find(req.query , function(err, results){
      if(err) return res.json(err)
      res.json(results)
    })
  })
- .post('/some-model', function(req, res){
-     let newRecord = new SomeModel(req.body)
+ .post('/item', function(req, res){
+     let newRecord = new ItemModel(req.body)
 
      newRecord.save(function(err, record){
         if(err) return res.status(500).send(err)
@@ -29,16 +29,16 @@ apiRouter
 
 
 apiRouter
- .get('/some-model/:_id', function(req, res){
-   SomeModel.findById(req.params._id, "-password", function(err, record){
+ .get('/item/:_id', function(req, res){
+   ItemModel.findById(req.params._id, "-password", function(err, record){
      if(err || !record ) return res.json(err)
      res.json(record)
    })
  })
 
- .put('/some-model/:_id', function(req, res){
+ .put('/item/:_id', function(req, res){
 
-   SomeModel.findByIdAndUpdate(req.params._id, req.body, function(err, record){
+   ItemModel.findByIdAndUpdate(req.params._id, req.body, function(err, record){
        if (err) {
          res.status(500).send(err)
        }
@@ -51,8 +51,8 @@ apiRouter
    })
  })
 
- .delete('/some-model/:_id', function(req, res){
-   SomeModel.remove({ _id: req.params._id}, (err) => {
+ .delete('/item/:_id', function(req, res){
+   ItemModel.remove({ _id: req.params._id}, (err) => {
      if(err) return res.json(err)
      res.json({
        msg: `record ${req.params._id} successfully deleted`,
@@ -63,7 +63,7 @@ apiRouter
 
  // TO DELETE ALL:
  // .delete("/resources/all/records", function(req, res){
- //   SomeModel.remove({}, (err) => {
+ //   ItemModel.remove({}, (err) => {
  //     if(err) return res.json(err)
  //     res.json({
  //       msg: `EVEYTHING successfully deleted`

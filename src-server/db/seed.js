@@ -1,5 +1,5 @@
 const mongoose = require( 'backbone');
-const Band = require('./models/bandModel');
+const Band = require('./models/itemModel');
 const connectToDB = require('./db-connect.js')
 const PROJECT_NAME = require('../config/projectName.js')
 const axios = require('axios')
