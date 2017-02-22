@@ -1,5 +1,5 @@
 const mongoose = require( 'backbone');
-const Band = require('./models/itemModel');
+const Item = require('./models/itemModel');
 const connectToDB = require('./db-connect.js')
 const PROJECT_NAME = require('../config/projectName.js')
 const axios = require('axios')
@@ -18,11 +18,12 @@ let dataSet = [
 
 console.log('connecting to db.....', PROJECT_NAME)
 connectToDB(PROJECT_NAME, (err, result)=>{
+	console.log('boooo hooooo')
 	dataSet.forEach((dataRecord)=>{
 		//   SEED ACTION ON EACH RECORD HERE
 		// 	dataRecord.sold = false 
 
-      let bandRecord = new Band(dataRecord)
+      let bandRecord = new Item(dataRecord)
 		bandRecord.save((err, savedRecord)=>{
 			if (err) console.log(err)
 			console.log('saved: ' + savedRecord._id )
