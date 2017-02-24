@@ -1,6 +1,7 @@
-# Data Persistence - Meg's List - Part 1
+# Data Persistence - Meg's List
 ##Description
-Create a craigslist clone where users can upload items for sale in a casual unstructured, garage-sale style manner. In Part 1, you will need to build a UI-form that communicates with a REST API so that users will be able to save new postings to a backend.
+Create a craigslist clone where users can upload miscellaneous items for sale. 
+Users will be able to see current listings, and create listings, 
 
 ## Objectives
 
@@ -9,6 +10,7 @@ After completing this assignment, you should be able to:
 * Use Backbone.Views to render a view template for a form
 * Use Backbone.Views to capture form data from the `submit` event
 * Save data from a submit event to a backend database
+* Fetch and render the data.
 
 
 ##Setup 
@@ -36,7 +38,7 @@ You only have to do this once. control-c when done
 npm run gen-seed-data
 ```
 
-##### 5. Checkout «your-project-name_dev» in MongoChef to see if the seeded data is there.
+##### 5. Checkout «your-project-name»\_dev in MongoChef to see if the seeded data is there.
 
 
 ##### 6. Workflow
@@ -55,8 +57,14 @@ Do scss and javascript work in the `src/` directory. It will compile to the `dis
 * No JS errors in the browser
 * All functions and code should work according to the following description.
 
-## Normal Mode
-Create a Backbone View builds an html string template of a form. The view should listen for a submit event and capture relevant data. Data should be saved by creating a new model instance.
+### Normal Mode
+Create the following routes:
+
+```
+''         (shows all listings)
+'new'      (shows a form to create a listing)
+'item/:id' (shows a single listing)
+```
 
 
 The data saved to the backend should have the following structure:
@@ -72,22 +80,14 @@ The data saved to the backend should have the following structure:
 }
 ```
 
-## Explorer Mode
-Integrate with Backbone Router. (Give a root path that shows something like: 'site under construction')
-```
-'item/new'
-'' 
-```
+### Explorer Mode
+Create a route and view that will allow a user to edit an input.
 
-## Adventure Mode
-Provide form validation that gives feedback as to whether a user submitted valid input.
-
-## Epic Mode
-Create a route to edit an input: 
+In Backbone Router:
 ```
-'item/new'
 'item/:id/edit'
-''
 ```
 
-It will populate the form and 
+
+### Adventure Mode
+Provide form validation that gives feedback as to whether a user submitted valid input.
