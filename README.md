@@ -90,4 +90,12 @@ In Backbone Router:
 
 
 ### Adventure Mode
-Provide form validation that gives feedback as to whether a user submitted valid input.
++ Create routes for categories
+```
+'category/:category'
+```
+
++ Provide form validation that gives feedback as to whether a user submitted valid input for a field. (e.g. the price should be a number, no fields can be blank, etc.)
+
+### Epic Mode
+Allow users to upload images from their file system to [filestack](https://www.filestack.com/), and use the returned image link as the value for the `imageLink` property. .
