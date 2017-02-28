@@ -3,13 +3,140 @@
 }
 
 body{
-	background: limegreen;
+	background: #F3ECBE;
+	font-family: 'Lato', sans-serif;
 }
 
 $txt-color: #333;
 
 h2{
-	color: $txt-color;
 	border-bottom: 4px solid $txt-color;
 }
 
+//////Navbar
+
+.navbar {
+	background: #000;
+	.container {
+		margin-left: 0;
+	}
+}
+
+.navbar-brand {
+	color: #F3ECBE;
+	img{
+		width: 35px;
+		padding-bottom: 5px;
+	}
+}
+
+.nav li {
+	text-decoration: none;
+	cursor: pointer;
+	padding-top: 3px;
+	:hover {
+		color: #fff;
+	}
+}
+
+/////Home Page
+
+.page-title {
+	font-size: 25px;
+	padding: 0 0 10px;
+	border-bottom: 4px solid $txt-color;
+
+}
+
+.page-content {
+	padding: 0 20px;
+
+}
+
+.col-sm-4:nth-child(3n+1){
+    clear: left;
+}
+
+
+.thumbnail {
+	text-align: center;
+	box-shadow: 10px 10px 5px #888888;
+	img{
+		width: 200px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+}
+
+.thumbnail:hover {
+	cursor: pointer;
+}
+
+//////Single Item
+
+.single-item_image {
+		img{
+		width: 100%;
+		}
+}
+
+.item_second-row {
+	padding: 10px;
+	font-size: 20px;
+}
+
+.item_third-row {
+	padding-top: 15px;
+
+	button{
+		padding: 3px;
+		outline: none;
+		width: 40%;
+	}
+	.btn_edit{
+		margin-left: 50px;
+	}
+
+}
+
+
+///////Form Page
+#form_new-listing{
+	hr{
+		color: #000;
+	}
+  input {
+	outline: none;
+	}
+}
+
+.field_description {
+	input{
+		width: 400px;
+		padding: 0 0 100px;
+	}
+}
+
+.field_image {
+	padding-bottom: 10px;
+	input{
+		width: 400px;
+	}
+}
+
+.image-preview-contaner {
+	width: 400px;
+}
+
+.input-correct {
+	background: #26C281;
+	font-color: #000;
+}
+
+.input-incorrect {
+	background: #FF0000;
+	font-color: #000;
+}
